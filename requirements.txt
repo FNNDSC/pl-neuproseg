@@ -4,4 +4,7 @@ keras
 opencv-python
 pandas
 scikit-image
+SimpleITK
+h5py
+
 
