@@ -1,1 +1,7 @@
 chrisapp==1.0.5
+tensorflow
+keras
+opencv-python
+pandas
+scikit-image
+

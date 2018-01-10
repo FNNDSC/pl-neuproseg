@@ -13,6 +13,10 @@ import os
 # import the Chris app superclass
 from chrisapp.base import ChrisApp
 
+import UNET3D
+import preprocessing
+import utils
+import segmentation
 
 
 class Neuproseg(ChrisApp):
