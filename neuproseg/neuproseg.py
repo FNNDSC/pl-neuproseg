@@ -44,12 +44,26 @@ class Neuproseg(ChrisApp):
         """
         Define the CLI arguments accepted by this plugin app.
         """
+        self.add_argument(
+            '--multistream',
+            dest        = 'b_multistream',
+            type        = bool,
+            default     = False,
+            action      = 'store_true',
+            optional    = True,
+            help        = 'Activate multistream in the segmenter algorithm.'
+        )
 
     def run(self, options):
         """
         Define the code to be run by this plugin app.
         """
-
+        print('Multistream = ' + str(options.b_multistream))
+        segmentation.segment(    
+                    inputDirectory  = options.inputdir, 
+                    outputDirectory = options.outputdir, 
+                    multistream     = options.b_multistream
+                    )
 
 # ENTRYPOINT
 if __name__ == "__main__":
