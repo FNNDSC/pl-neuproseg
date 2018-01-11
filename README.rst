@@ -53,7 +53,7 @@ This will run the containerized segmenter on the passed input directory (on the 
 
 The ``chmod 777 output`` is necessary to allow the container to store data in ``output`` -- in some cases, particularly in NFS mapped spaces (if ``output`` is on an NFS space) and if the NFS space is mounted as ``rootsquash``, then ``root`` on the local machine might not be able to write to a directory, pending its permissions.
 
-Directly ``on the metal``
+Directly *on the metal*
 =========================
 
 To run directly, several dependencies have to be satisfied -- thus we recommend using the container. If, however, you wish to run *on the metal*, and assuming these dependencies have been met, do
