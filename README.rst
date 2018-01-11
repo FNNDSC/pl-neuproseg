@@ -51,7 +51,7 @@ Assuming you have pulled the ``fnndsc/pl-neuproseg`` container, and assuming the
 
 This will run the containerized segmenter on the passed input directory (on the host), writing output to the passed output directory.
 
-Make sure that the host ``output`` directory is world writable!
+The ``chmod 777 output`` is necessary to allow the container to store data in ``output`` -- in some cases, particular in NFS mapped spaces (if ``output`` is on an NFS space) and if the NFS space is mounted as ``rootsquash`` then ``root`` on the local machine might not be able to write to a directory, pending its permissions.
 
 Directly ``on the metal``
 =========================
@@ -62,6 +62,8 @@ To run directly, several dependencies have to be satisfied -- thus we recommend 
 
     mkdir output
     python3 neuproseg/neuproseg.py --multistream ./data/ProstateX-0029 ./output
+
+See below for the setup of the app *directly*.
 
 Setup a python virtual environment
 ----------------------------------
