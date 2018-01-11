@@ -65,7 +65,8 @@ To run directly, several dependencies have to be satisfied -- thus we recommend 
 .. code-block:: bash
 
     mkdir output
-    python3 neuproseg/neuproseg.py --multistream ./data/ProstateX-0029 ./output
+    cd neuproseg
+    python3 neuproseg.py --multistream ../data/ProstateX-0029 ../output
 
 See below for the setup of the app *directly*.
 
