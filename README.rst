@@ -41,8 +41,6 @@ Using a container
 
 Assuming you have pulled the ``fnndsc/pl-neuproseg`` container, and assuming the use of the ``data`` directory in this repository, 
 
-Assign an "input" directory to ``/incoming`` and an output directory to ``/outgoing``
-
 .. code-block:: bash
 
     mkdir output
