@@ -21,7 +21,7 @@ Input data is required to run this plugin and has been supplied as part of this 
 Deploy
 ******
 
-This repository is associated with dockerhub and automated builds are enabled. Thus, to ``install`` this container, simply do
+This repository is associated with ``dockerhub`` and automated builds are enabled. Thus, to ``install`` this container, simply do
 
 .. code-block:: bash
 
