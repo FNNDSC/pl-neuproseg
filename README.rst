@@ -45,13 +45,15 @@ Assuming you have pulled the ``fnndsc/pl-neuproseg`` container, and assuming the
 
     mkdir output
     chmod 777 output # So that the container can write results here!
-    docker run -v ./data/ProstateX-0029:/incoming -v ./output:/outgoing   \
+    docker run -v $(pwd)/data/ProstateX-0029:/incoming -v $(pwd)/output:/outgoing   \
             fnndsc/pl-neuproseg neuproseg.py --multistream           \
             /incoming /outgoing
 
 This will run the containerized segmenter on the passed input directory (on the host), writing output to the passed output directory.
 
 The ``chmod 777 output`` is necessary to allow the container to store data in ``output`` -- in some cases, particularly in NFS mapped spaces (if ``output`` is on an NFS space) and if the NFS space is mounted as ``rootsquash``, then ``root`` on the local machine might not be able to write to a directory, pending its permissions.
+
+Also, note that the ``$(pwd)`` is necessary in the above since ``docker`` requires absolute directory specs in mapping.
 
 On successful completion, the ``output`` directory will contain the segmentated image data.
 
