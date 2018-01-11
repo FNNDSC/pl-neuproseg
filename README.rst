@@ -24,21 +24,40 @@ Directly ``on the metal``
 Setup a python virtual environment
 ----------------------------------
 
-To run the app directly, we recommend setting up a python virtual environment. On Ubuntu, you can docker
+To run the app directly, we recommend setting up a python virtual environment. On Ubuntu, you can do
 
 .. code-block:: bash
 
-sudo apt install virtualenv virtualenvwapper
-echo "source /usr/share/virtualenvwrapper/virtualenvwrapper.sh" >> ~/.bashrc
+    sudo apt install virtualenv virtualenvwrapper
+    echo "source /usr/share/virtualenvwrapper/virtualenvwrapper.sh" >> ~/.bashrc
 
 then, create a directory to contain all your python virual environments, e.g.
 
 .. code-block:: bash
-cd ~
-mkdir python-venv
-cd python-venv
-virtualenv --python=python3.6 --system-site-packages pl_en
+    cd ~
+    mkdir python-venv
+    cd python-venv
+    virtualenv --python=python3.6 --system-site-packages pl_env
 
+finally, run the following to use the virtual environment
+
+.. code-block:: bash
+   export WORKON_HOME=~/python-venv
+   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh    
+
+we suggest adding the above to a file and then simply sourcing that file. Create the file once
+
+.. code-block:: bash
+   export WORKON_HOME=~/python-venv > ~/penv
+   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh  >> ~/penv 
+
+and then simply for any subsequent use
+
+.. code-block:: bash
+    source ~/penv ; workon pl_env
+    
+
+Run in this environment
 
 Using ``docker run``
 ====================
