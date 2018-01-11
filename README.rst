@@ -29,11 +29,11 @@ To run the app directly, we recommend setting up a python virtual environment. O
 .. code-block:: bash
 
     sudo apt install virtualenv virtualenvwrapper
-    echo "source /usr/share/virtualenvwrapper/virtualenvwrapper.sh" >> ~/.bashrc
 
 then, create a directory to contain all your python virual environments, e.g.
 
 .. code-block:: bash
+
     cd ~
     mkdir python-venv
     cd python-venv
@@ -42,18 +42,21 @@ then, create a directory to contain all your python virual environments, e.g.
 finally, run the following to use the virtual environment
 
 .. code-block:: bash
+
    export WORKON_HOME=~/python-venv
    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh    
 
 we suggest adding the above to a file and then simply sourcing that file. Create the file once
 
 .. code-block:: bash
+
    export WORKON_HOME=~/python-venv > ~/penv
    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh  >> ~/penv 
 
 and then simply for any subsequent use
 
 .. code-block:: bash
+
     source ~/penv ; workon pl_env
     
 
