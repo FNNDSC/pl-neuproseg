@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #                                                            _
 # neuproseg ds app
 #
@@ -9,6 +10,7 @@
 #
 
 import os
+import sys
 
 # import the Chris app superclass
 from chrisapp.base import ChrisApp
@@ -32,7 +34,7 @@ class Neuproseg(ChrisApp):
     TYPE            = 'ds'
     DESCRIPTION     = 'This application applies a trained model to MRI data of prostrates and outputs a segmented volume.'
     DOCUMENTATION   = 'http://github.com/FNNDSC/pl-neuproseg/wiki'
-    VERSION         = '0.1'
+    VERSION         = '0.99.9'
     LICENSE         = 'Opensource (MIT)'
 
     # Fill out this with key-value output descriptive info (such as an output file path
@@ -54,10 +56,24 @@ class Neuproseg(ChrisApp):
             help        = 'Activate multistream in the segmenter algorithm.'
         )
 
+        self.add_argument(
+            '--version',
+            dest        = 'b_version',
+            type        = bool,
+            default     = False,
+            action      = 'store_true',
+            optional    = True,
+            help        = 'Show version and exit.')
+
     def run(self, options):
         """
         Define the code to be run by this plugin app.
         """
+
+        if options.b_version:
+            print(Neuproseg.VERSION)
+            sys.exit(0)
+
         print('Multistream = ' + str(options.b_multistream))
         segmentation.segment(    
                     inputDirectory  = options.inputdir, 
