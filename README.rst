@@ -53,6 +53,8 @@ This will run the containerized segmenter on the passed input directory (on the 
 
 The ``chmod 777 output`` is necessary to allow the container to store data in ``output`` -- in some cases, particularly in NFS mapped spaces (if ``output`` is on an NFS space) and if the NFS space is mounted as ``rootsquash``, then ``root`` on the local machine might not be able to write to a directory, pending its permissions.
 
+On successful completion, the ``output`` directory will contain the segmentated image data.
+
 Directly *on the metal*
 =========================
 
@@ -113,25 +115,6 @@ In this virtual environment, install all the necessary dependencies
 .. code-block:: bash
 
     pip3 install -r requirements.txt
-
-
-
-Run in this environment
-
-Using ``docker run``
-====================
-
-Assign an "input" directory to ``/incoming`` and an output directory to ``/outgoing``
-
-.. code-block:: bash
-
-    docker run -v $(pwd)/in:/incoming -v $(pwd)/out:/outgoing   \
-            fnndsc/pl-neuproseg neuproseg.py            \
-            /incoming /outgoing
-
-This will ...
-
-Make sure that the host ``$(pwd)/out`` directory is world writable!
 
 
 
