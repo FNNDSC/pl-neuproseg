@@ -6,7 +6,7 @@ pl-neuproseg
 Abstract
 ********
 
-This application applies a trained model to MRI data of prostrates and outputs a segmented volume. Note, this application has already been trained *a priori* and the purpose of this plugin is to deploy this trained model and perform a segmentation on existing *preprocessed* data.
+This application applies a trained UNET model to MRI data of prostates and outputs a segmented volume. Note, this application has already been trained *a priori* and the purpose of this plugin is to deploy this trained model and perform a segmentation on existing *preprocessed* data.
 
 The *preprocessing* of data is **out of scope** of this application, and the assumption is that input data has been properly preprocessed.
 
