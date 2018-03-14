@@ -101,8 +101,8 @@ we suggest adding the above to a file and then simply sourcing that file. Create
 
 .. code-block:: bash
 
-   export WORKON_HOME=~/python-venv > ~/penv
-   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh  >> ~/penv 
+   echo "export WORKON_HOME=~/python-venv" > ~/penv
+   echo "source /usr/share/virtualenvwrapper/virtualenvwrapper.sh"  >> ~/penv 
 
 and then simply for any subsequent use
 
