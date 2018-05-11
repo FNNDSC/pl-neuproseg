@@ -24,4 +24,4 @@ RUN apt-get update \
   && apt install -y python3-tk     				      \
   && pip install -r requirements.txt 
 
-CMD ["neuproseg.py", "--json"]
+CMD ["neuproseg.py", "--help"]
