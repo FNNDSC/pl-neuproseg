@@ -7,7 +7,7 @@ MAINTAINER fnndsc "dev@babymri.org"
 ARG UID=1001
 ENV UID=$UID
 
-ENV APPROOT="/usr/src/neuproseg"  VERSION="0.99.9"
+ENV APPROOT="/usr/src/neuproseg" 
 COPY ["neuproseg", "${APPROOT}"]
 COPY ["requirements.txt", "${APPROOT}"]
 

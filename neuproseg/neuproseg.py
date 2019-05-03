@@ -34,7 +34,7 @@ class Neuproseg(ChrisApp):
     TYPE            = 'ds'
     DESCRIPTION     = 'This application applies a trained model to MRI data of prostrates and outputs a segmented volume.'
     DOCUMENTATION   = 'http://github.com/FNNDSC/pl-neuproseg/wiki'
-    VERSION         = '0.99.9'
+    VERSION         = '1.0.0'
     LICENSE         = 'Opensource (MIT)'
     MAX_NUMBER_OF_WORKERS = 1  # Override with integer value
     MIN_NUMBER_OF_WORKERS = 1  # Override with integer value
